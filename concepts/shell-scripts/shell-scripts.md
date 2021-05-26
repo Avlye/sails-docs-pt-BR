@@ -11,27 +11,27 @@ Para adicionar um novo script, apenas crie um arquivo no diretório `scripts/` d
 sails generate script hello
 ```
 
-Then, to run it, use:
+Então, para executar, use:
 
 ```bash
 sails run hello
 ```
 
-> If you need to run a script without global access to the `sails` command-line interface (in a Procfile, for example), use `node ./node_modules/sails/bin/sails run hello`.
+> Se você precisa executar um script sem acesso global à interface de linha de comando `sails` (em uma Procfile, por exemplo), use `node ./node_modules/sails/bin/sails run hello`.
 
 ### Example
 
-Here's a more complex example that you might see in a real-world app:
+Aqui está um exemplo mais complexo que você pode ver em um app no mundo real:
 
 ```js
 // scripts/send-email-proof-reminders.js
 module.exports = {
 
-  description: 'Send a reminder to any recent users who haven\'t confirmed their email address yet.',
+  description: 'Envie um lembrete a todos os usuários recentes que ainda não confirmaram seus endereços de e-mail.',
 
   inputs: {
     template: {
-      description: 'The name of another email template to use as an optional override.',
+      description: 'O nome de outro modelo de email para usar como uma substituição opcional.',
       type: 'string',
       defaultsTo: 'reminder-to-confirm-email'
     }
@@ -61,13 +61,13 @@ module.exports = {
 };
 ```
 
-Then you can run:
+Então você pode executar:
 
 ```bash
 sails run send-email-proof-reminders
 ```
 
-For more detailed information on usage, see the [`whelk` README](https://github.com/sailshq/whelk/blob/master/README.md).
+Para obter informações mais detalhadas sobre o uso, consulte [`whelk` README](https://github.com/sailshq/whelk/blob/master/README.md).
 
 <docmeta name="displayName" value="Shell scripts">
 <docmeta name="nextUpLink" value="/documentation/concepts/models-and-orm">
